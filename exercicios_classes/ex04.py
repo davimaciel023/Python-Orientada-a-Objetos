@@ -9,11 +9,15 @@ class Pessoa:
         self.__altura = altura
 
     def crescer(self):
-        for i in (self.__idade - 21):
-            if self.__idade < 21:
-                self.__altura += 0.05
-                print(self.__altura)
-            else:
-                ...
-pessoa = Pessoa('Davi', 17, '80kg', 1.83)
+        for i in range(21):
+            self.__idade += 1
+            print(20 * '=')
+            print(f'Sua idade é {self.__idade}')
+            self.__altura += 0.05
+            print(f'Sua altura é {round(self.__altura, 2)}')
+            self.__peso += 4
+            print(f'Seu peso é {self.__peso}')
+            print(20 * '=')
+
+pessoa = Pessoa('Davi', 0, 9, 0.80)
 pessoa.crescer()
