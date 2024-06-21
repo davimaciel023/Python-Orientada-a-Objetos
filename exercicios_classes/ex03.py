@@ -4,12 +4,12 @@
 # Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.
 import os
 class Retangulo:
-    os.system('cls')
     def __init__(self, comprimento, largura):
         self.__comprimento = comprimento
         self.__largura = largura
 
     def mudar_valores(self):
+        os.system('cls')
         area = self.__largura * self.__comprimento
         perimetro = 2 * (self.__comprimento + self.__largura)
         print()
