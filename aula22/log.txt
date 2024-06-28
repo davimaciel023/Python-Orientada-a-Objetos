@@ -1,2 +1,4 @@
 Error: qualquer coisa (LogFileMixin)
 Success: Sucesso (LogFileMixin)
+Success: xiome está ligado (Smartphone)
+Error: Sansung está desligado (Smartphone)
