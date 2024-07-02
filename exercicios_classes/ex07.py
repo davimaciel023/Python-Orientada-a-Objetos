@@ -9,3 +9,33 @@ class BichinhoVirtual:
         self.fome = fome
         self.saude = saude
         self.idade = idade
+
+    def alterar_nome(self, nome):
+        self.nome = nome
+        print(f'Seu novo nome é {self.nome}')
+    
+    def alterar_fome(self, fome):
+        self.fome = fome
+        print(f'Sua nova fome é {self.fome}')
+
+    def alterar_saude(self, saude):
+        self.saude = saude
+        print(f'Sua saude é {self.saude}')
+
+    def alterar_idade(self, idade):
+        self.idade = idade
+        print(f'Sua idade é {self.idade}')
+
+    def CheckHumor(self):
+        if self.fome >= 7 or self.saude <= 3:
+            print('Está Mal humorado')
+        else:
+            print("Está bem humorado")
+
+
+dog = BichinhoVirtual('Dog', 6, 4, 3)
+dog.alterar_nome('feroz')
+dog.alterar_fome(7)
+dog.alterar_idade(4)
+dog.alterar_saude(5)
+dog.CheckHumor()
