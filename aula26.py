@@ -9,3 +9,17 @@
 # Adicionando notas em exceções (3.11.0)
 class MyError(Exception):
     ...
+class OutroError(Exception):
+    ...
+
+def levantar():
+    exception_ = MyError('a', 'b', 'c') 
+    raise exception_
+try:
+    levantar()
+except (MyError, ZeroDivisionError) as error:
+    print(error.__class__.__name__)
+    print(error)
+    print()
+    exception_ = OutroError('Vou lançar de novo')
+    raise exception_ from error
