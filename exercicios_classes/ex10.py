@@ -13,3 +13,31 @@ alterarCombustivel( ) – altera o tipo do combustível.
 alterarQuantidadeCombustivel( ) – altera a quantidade de combustível restante na bomba.
 OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade de combustível total na bomba.
 """
+class BombaCombustivel:
+    def __init__(self, tipoCombustivel='comum', valorLitro=30, quantidadeCombustivel=30):
+        self._tipoCombustivel = tipoCombustivel
+        self._valorLitro = valorLitro
+        self._quantidadeCombustivel = quantidadeCombustivel
+
+    def abastecerPorValor(self, tipoCombustivel='comum', valor=30):
+        if tipoCombustivel == 'comum':
+            print(f'Você abasteceu {(valor/self._valorLitro):.2f}L de gasolina {self._tipoCombustivel}')
+
+
+    def abastecerPorLitro(self, tipoCombustivel='self._valorLitro', valor=10):
+        if tipoCombustivel == 'self._valorLitro':
+            print(f'Você abasteceu {(valor*self._valorLitro):.2f}Reais de gasolina {self._tipoCombustivel}')
+
+
+
+    def alterarValor(self):
+        ...
+
+    def alterarCombustivel(self):
+        ...
+
+    def alterarQuantidadeCombustivel(self):
+        ...
+bc = BombaCombustivel()
+print(bc.abastecerPorValor())
+print(bc.abastecerPorLitro())
