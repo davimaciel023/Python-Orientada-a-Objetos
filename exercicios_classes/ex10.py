@@ -14,30 +14,30 @@ alterarQuantidadeCombustivel( ) – altera a quantidade de combustível restante
 OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade de combustível total na bomba.
 """
 class BombaCombustivel:
-    def __init__(self, tipoCombustivel='comum', valorLitro=30, quantidadeCombustivel=30):
+    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel=None):
         self._tipoCombustivel = tipoCombustivel
         self._valorLitro = valorLitro
         self._quantidadeCombustivel = quantidadeCombustivel
 
-    def abastecerPorValor(self, tipoCombustivel='comum', valor=30):
-        if tipoCombustivel == 'comum':
+    def abastecerPorValor(self, valor):
+        if self._tipoCombustivel:
             print(f'Você abasteceu {(valor/self._valorLitro):.2f}L de gasolina {self._tipoCombustivel}')
 
 
-    def abastecerPorLitro(self, tipoCombustivel='self._valorLitro', valor=10):
-        if tipoCombustivel == 'self._valorLitro':
+    def abastecerPorLitro(self, valor):
+        if self._tipoCombustivel:
             print(f'Você abasteceu {(valor*self._valorLitro):.2f}Reais de gasolina {self._tipoCombustivel}')
+        
 
 
+    def alterarValor(self, valor):
+        self._valorLitro = valor
 
-    def alterarValor(self):
-        ...
+    def alterarCombustivel(self, combustivel):
+        self._tipoCombustivel = combustivel
 
-    def alterarCombustivel(self):
-        ...
-
-    def alterarQuantidadeCombustivel(self):
-        ...
-bc = BombaCombustivel()
-print(bc.abastecerPorValor())
-print(bc.abastecerPorLitro())
+bc = BombaCombustivel('comum', 3)
+bc.alterarValor(3.5)
+bc.alterarCombustivel('aditivada')
+bc.abastecerPorValor(30)
+bc.abastecerPorLitro(3)
