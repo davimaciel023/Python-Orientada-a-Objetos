@@ -12,3 +12,12 @@ Exemplo de uso:
     meuFusca.andar(100);            # anda 100 quilômetros.
     meuFusca.obterGasolina()        # Imprime o combustível que resta no tanque.
 """
+class Carro:
+    def __init__(self, consul_combustivel):
+        self._consul_combustivel = consul_combustivel
+
+    def adicionar_gasolina(self, gasolina):
+        gasolina_adicionada = gasolina
+    
+    def andar(self, km):
+        ...
