@@ -13,11 +13,30 @@ Exemplo de uso:
     meuFusca.obterGasolina()        # Imprime o combustível que resta no tanque.
 """
 class Carro:
-    def __init__(self, consul_combustivel):
-        self._consul_combustivel = consul_combustivel
+    def __init__(self, consu_combustivel):
+        self._consu_combustivel = consu_combustivel
 
     def adicionar_gasolina(self, gasolina):
-        gasolina_adicionada = gasolina
+        self._gasolina = 0
+        self._gasolina = gasolina
+        print('Nível de gasolina adicionada')
     
     def andar(self, km):
-        ...
+        self.km = km
+
+        for self.i in range(self.km):
+            if self.i == self._consu_combustivel:
+                self._gasolina -= 1
+                self.i = 0
+                self.km -= self._consu_combustivel
+
+    def obter_gasolina(self):
+        if self._gasolina == 0:
+            print("Gasolina esgotada")
+        else: 
+            print(f"Restou no tanque {self._gasolina}L de gasolina")
+
+c = Carro(15)
+c.adicionar_gasolina(20)
+c.andar(100)
+c.obter_gasolina()
