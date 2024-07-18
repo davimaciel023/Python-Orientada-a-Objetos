@@ -23,13 +23,13 @@ class Carro:
     
     def andar(self, km):
         self.km = km
+        nv_combustivel = self._consu_combustivel
 
         for self.i in range(self.km):
             if self.i == self._consu_combustivel:
                 self._gasolina -= 1
-                self.i = 0
-                self.km -= self._consu_combustivel
-
+                self._consu_combustivel += nv_combustivel
+    
     def obter_gasolina(self):
         if self._gasolina == 0:
             print("Gasolina esgotada")
