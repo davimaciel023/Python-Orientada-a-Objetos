@@ -25,12 +25,12 @@ class Carro:
         self.km = km
         nv_combustivel = self._consu_combustivel
 
-        for self.i in range(self.km):
-            if self.i == self._consu_combustivel:
+        for i in range(self.km):
+            if i == self._consu_combustivel:
                 self._gasolina -= 1
                 self._consu_combustivel += nv_combustivel
                 if self._gasolina == 0:
-                    print(f'Você andou {self.i}km')
+                    print(f'Você andou {i}km')
                     break
     def obter_gasolina(self):
         if self._gasolina == 0:
@@ -40,5 +40,5 @@ class Carro:
 
 c = Carro(15)
 c.adicionar_gasolina(20)
-c.andar(1000)
+c.andar(100)
 c.obter_gasolina()
