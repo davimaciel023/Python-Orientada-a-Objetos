@@ -33,6 +33,11 @@ class MyOpen:
         print('EXIT')  
         self._arquivo.close()
 
+        # print(class_exception)
+        # print(exception_)
+        # print(traceback_)
+
+        exception_.add_note("Minha nota")
 
 with MyOpen('aula30.txt', 'w') as arquivo:
     arquivo.write('linha 1\n')
