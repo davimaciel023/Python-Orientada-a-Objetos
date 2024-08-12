@@ -13,5 +13,6 @@ def gerando_senha(quanti, tamanho):
             senha.append(random.choice(strings))
     
         print(senha)
+        prinT()
 
 gerando_senha(quanti, tamanho)
