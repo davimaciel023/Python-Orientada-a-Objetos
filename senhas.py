@@ -12,7 +12,7 @@ def gerando_senha(quanti, tamanho):
         for j in range(0, int(tamanho)):
             senha += random.choice(strings)
     
-        print(senha)
+        print(f'senha{i}: {senha}')
         print()
 
 gerando_senha(quanti, tamanho)
