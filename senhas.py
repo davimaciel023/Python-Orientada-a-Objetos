@@ -15,7 +15,5 @@ def gerando_senha(quanti, tamanho):
         print(f'senha{i+1}: {senha}')
         print()
 
+
 gerando_senha(quanti, tamanho)
-
-
-
