@@ -16,3 +16,6 @@ def gerando_senha(quanti, tamanho):
         print()
 
 gerando_senha(quanti, tamanho)
+
+
+
