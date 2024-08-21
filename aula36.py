@@ -22,3 +22,15 @@
 # com certeza que precisam delas e não precisam de uma explicação
 # sobre o porquê)."
 # — Tim Peters (CPython Core Developer)
+
+class Pessoa:
+    def __new__(cls, *args, **kwargs):
+        print('MEU NEW')
+        instancia = super().__new__(cls)
+        return instancia
+    
+    def __init__(self, nome):
+        print("MEU INIT")
+        self.nome = nome
+
+p1 = Pessoa('Davi')
