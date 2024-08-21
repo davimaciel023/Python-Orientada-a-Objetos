@@ -23,7 +23,13 @@
 # sobre o porquê)."
 # — Tim Peters (CPython Core Developer)
 
-class Pessoa:
+class Meta(type):
+    def __new__(mcs, name, bases, dct):
+        print('METACLASS NEW')
+        cls = super().__new__(mcs, name, bases, dct)
+        return cls
+    
+class Pessoa(metaclass=type):
     def __new__(cls, *args, **kwargs):
         print('MEU NEW')
         instancia = super().__new__(cls)
