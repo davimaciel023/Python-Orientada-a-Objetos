@@ -1,0 +1,1 @@
+# Classes decoradoras (Decorator classes)
