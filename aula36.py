@@ -39,4 +39,4 @@ class Pessoa(metaclass=type):
         print("MEU INIT")
         self.nome = nome
 
-p1 = Pessoa('Davi')
+p1 = Pessoa('Davi') 
