@@ -2,7 +2,11 @@ def criptografando(senha, casas):
     criptografia = ''
     for i in range(len(senha)):
         if senha[i] != ' ':
-            criptografia += strings[i+casas]
+            if (len(strings) + casas) >= 26:
+                for j in range():
+                    ...
+            else:
+                criptografia += strings[i+casas]
         else:
             criptografia += senha[i]
     print(criptografia)
