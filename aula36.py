@@ -22,9 +22,6 @@
 # com certeza que precisam delas e não precisam de uma explicação
 # sobre o porquê)."
 # — Tim Peters (CPython Core Developer)
-from typing import Any
-
-
 def meu_repr(self):
     return f"{type(self).__name__}({self.__dict__})"
 
@@ -58,10 +55,10 @@ class Pessoa(metaclass=Meta):
         
     def __init__(self, nome):
         print("MEU INIT")
-        # self.nome = nome
+        self.nome = nome
 
     def falar(self):
         print('FALANDO...')
 
-p1 = Pessoa('Davi') 
+p1 = Pessoa('Davi')
 p1.falar()
